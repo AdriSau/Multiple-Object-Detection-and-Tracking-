@@ -5,4 +5,4 @@ from ultralytics import YOLO
 model = YOLO("yolov8n.yaml")  # build a new model from scratch
 
 # Use the model
-model.train(data="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-\Sources\data.yaml", epochs=20)  # train the model
+model.train(data="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-\Sources\data.yaml", epochs=3)  # train the model
