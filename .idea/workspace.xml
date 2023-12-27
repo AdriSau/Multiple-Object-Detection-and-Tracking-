@@ -3,64 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29fd5fa0-9504-4200-a5b1-1dd662e97825" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BestModel.pt" beforeDir="false" afterPath="$PROJECT_DIR$/BestModel.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/data.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fc56eadb8f27c58f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fc5afb4643e4c724.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fc65d41fe7a81ec6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fc89e4a4c0ba33f1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fc8c17e80f18f5b6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fd156be01d4b73d7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fde25b1d6758380d.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fdf4219cc5ed5864.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fdf60d4331750e33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fe0a768c7aea27a6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/fefab7842dfce8ee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/ff1f88850a3bd9e9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/images/ffb287659c154d32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fc56eadb8f27c58f.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fc5afb4643e4c724.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fc65d41fe7a81ec6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fc89e4a4c0ba33f1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fc8c17e80f18f5b6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fd156be01d4b73d7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fde25b1d6758380d.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fdf4219cc5ed5864.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fdf60d4331750e33.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fe0a768c7aea27a6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/fefab7842dfce8ee.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/ff1f88850a3bd9e9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/train/labels/ffb287659c154d32.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/261_jpg.rf.9c6d6b3f84915ce4dd983d1ebb5a2e9a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/279_jpg.rf.412567f1012b2186514129a4b3d6300e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/300_jpg.rf.e8e1a5080ade8ca7be78d2342ff76b09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/307_jpg.rf.1304369787941242aea20237cf72a389.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/357_jpg.rf.2dc9dd6626b707645422d51ee9d34e6f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/369_jpg.rf.5e3a899f642c1952bff76a6958a93b84.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/42_jpg.rf.60ce72cf64f90d3d3bf0ed05c463d4b6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/523_jpg.rf.87d74be345d706635b19a07a5c361725.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/612_jpg.rf.7f1872d06ff63ff4e622519e9082a660.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/68_jpg.rf.f2479b97ad7c7028e3163a02365ec420.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/73_jpg.rf.bf1efbc41953c3a6d696b94a922cb0e4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/813_jpg.rf.9f05447163788895d0368ca0822d849a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/895_jpg.rf.c6f1dd746f7fc20250c6ae4159f1b6e6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/images/96_jpg.rf.6aec6d86abcd58968aa33c202801bbac.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/261_jpg.rf.9c6d6b3f84915ce4dd983d1ebb5a2e9a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/279_jpg.rf.412567f1012b2186514129a4b3d6300e.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/300_jpg.rf.e8e1a5080ade8ca7be78d2342ff76b09.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/307_jpg.rf.1304369787941242aea20237cf72a389.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/357_jpg.rf.2dc9dd6626b707645422d51ee9d34e6f.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/369_jpg.rf.5e3a899f642c1952bff76a6958a93b84.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/42_jpg.rf.60ce72cf64f90d3d3bf0ed05c463d4b6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/523_jpg.rf.87d74be345d706635b19a07a5c361725.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/612_jpg.rf.7f1872d06ff63ff4e622519e9082a660.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/68_jpg.rf.f2479b97ad7c7028e3163a02365ec420.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/73_jpg.rf.bf1efbc41953c3a6d696b94a922cb0e4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/813_jpg.rf.9f05447163788895d0368ca0822d849a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/895_jpg.rf.c6f1dd746f7fc20250c6ae4159f1b6e6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/valid/labels/96_jpg.rf.6aec6d86abcd58968aa33c202801bbac.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object_Detection_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Object_Detection_main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
