@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29fd5fa0-9504-4200-a5b1-1dd662e97825" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Multiple-Object-Detection-and-Tracking-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Multiple-Object-Detection-and-Tracking-.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectDetc&amp;train.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectDetc&amp;train.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Object_Detection_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Object_Detection_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/data.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Prediction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +61,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Object_Detection_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -114,6 +113,7 @@
       <workItem from="1703723101525" duration="2463000" />
       <workItem from="1703726217012" duration="1275000" />
       <workItem from="1703727587349" duration="1168000" />
+      <workItem from="1703728868495" duration="1027000" />
     </task>
     <servers />
   </component>
@@ -132,6 +132,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Multiple_Object_Detection_and_Tracking_$Object_Detection_main.coverage" NAME="Object_Detection_main Coverage Results" MODIFIED="1703728466847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Multiple_Object_Detection_and_Tracking_$Object_Detection_main.coverage" NAME="Object_Detection_main Coverage Results" MODIFIED="1703728882047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
