@@ -5,4 +5,6 @@ test: ../test/images
 
 names:
   0: cars
+  1: bicycle
+  2: person
 
