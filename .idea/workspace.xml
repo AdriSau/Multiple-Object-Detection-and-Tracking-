@@ -5,9 +5,323 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29fd5fa0-9504-4200-a5b1-1dd662e97825" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/runs/Performance_runs/FolderIndex.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BestModel.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectDetc&amp;train.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train10/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train11/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train11/labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train11/labels_correlogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/labels_correlogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train11/train_batch0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/train_batch0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train11/train_batch1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/train_batch1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train11/train_batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/train_batch2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train12/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train13/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train14/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train14/labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train14/labels_correlogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/labels_correlogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train14/train_batch0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/train_batch0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train14/train_batch1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/train_batch1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train14/train_batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/train_batch2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/F1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/F1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/PR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/PR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/P_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/P_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/R_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/R_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/args.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/args.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/weights/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/weights/best.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train15/weights/last.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train15/weights/last.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train16/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/F1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/F1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/PR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/PR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/P_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/P_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/R_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/R_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/args.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/args.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/train_batch1860.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/train_batch1860.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/train_batch1861.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/train_batch1861.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/train_batch1862.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/train_batch1862.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/weights/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/weights/best.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train17/weights/last.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train17/weights/last.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train18/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train18/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train18/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train19/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train19/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train19/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train19/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train19/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train19/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train2/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train20/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train20/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train20/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train20/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train20/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train20/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/val_batch1_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/val_batch1_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/val_batch2_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/val_batch2_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train21/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train22/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train22/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train22/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train22/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train22/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train22/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train23/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train23/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train23/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train23/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train23/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train23/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train24/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train24/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train24/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train24/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train24/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train24/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train25/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train25/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train25/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train26/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train26/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train26/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train26/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train26/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train26/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train27/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train28/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train29/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train3/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train30/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train31/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train32/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train33/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train34/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train35/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train36/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train37/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train38/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/labels_correlogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/labels_correlogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/train_batch0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/train_batch0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/train_batch1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/train_batch1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/train_batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/train_batch2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/val_batch1_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/val_batch1_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/val_batch1_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/val_batch2_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/val_batch2_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/val_batch2_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train39/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train4/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/labels_correlogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/labels_correlogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/train_batch0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/train_batch0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/train_batch1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/train_batch1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/train_batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/train_batch2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/val_batch1_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/val_batch1_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/val_batch1_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/val_batch2_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/val_batch2_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/val_batch2_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train40/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/F1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/F1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/PR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/PR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/P_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/P_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/R_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/R_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/args.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/args.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/val_batch1_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/val_batch1_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/val_batch1_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/val_batch2_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/val_batch2_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/val_batch2_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train41/weights/last.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train41/weights/last.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/F1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/F1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/PR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/PR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/P_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/P_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/R_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/R_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/args.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/args.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/train_batch25920.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/train_batch25920.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/train_batch25921.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/train_batch25921.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/train_batch25922.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/train_batch25922.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/val_batch1_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/val_batch1_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/val_batch1_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/val_batch2_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/val_batch2_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/val_batch2_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/weights/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/weights/best.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train42/weights/last.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train42/weights/last.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train5/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/R_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/R_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/labels_correlogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/labels_correlogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/train_batch0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/train_batch0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/train_batch1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/train_batch1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/train_batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/train_batch2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train6/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/F1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/F1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/PR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/PR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/P_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/P_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/args.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/args.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/train_batch30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/train_batch30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/train_batch31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/train_batch31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/train_batch32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/train_batch32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/weights/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/weights/best.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train7/weights/last.pt" beforeDir="false" afterPath="$PROJECT_DIR$/runs/Performance_runs/train7/weights/last.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train8/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train8/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train8/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train8/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train8/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train8/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/F1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/PR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/P_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/R_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/train9/weights/last.pt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,28 +356,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Object_Detection_main.executor": "Run",
-    "Python.Prediction.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/ProyectosGithub/Multiple-Object-Detection-and-Tracking-",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Object_Detection_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Prediction.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ProyectosGithub/Multiple-Object-Detection-and-Tracking-&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-\runs\Performance_runs" />
       <recent name="D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-" />
     </key>
   </component>
@@ -142,6 +457,7 @@
       <workItem from="1703728868495" duration="1027000" />
       <workItem from="1703761116810" duration="1408000" />
       <workItem from="1703939782181" duration="1505000" />
+      <workItem from="1704376331154" duration="864000" />
     </task>
     <servers />
   </component>
