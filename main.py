@@ -8,7 +8,7 @@ from tracker import Tracker
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-video_path = "testingFootage/Clip_TopView_720p.mp4"
+video_path = "testingFootage/Clip_TopView_720p_edited.mp4"
 video_path_movement = "testingFootage/prueba.mp4"
 video_out_path = "testingFootage/out.mp4"
 
