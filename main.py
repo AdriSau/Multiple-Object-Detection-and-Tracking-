@@ -48,8 +48,6 @@ while ret:
             bbox = track.bbox
             x_top_L, y_top_L, x_bot_R, y_bot_R = bbox
             track_id = track.track_id
-            print(track)
-            print(tracker.tracks)
             object_center_X = (int(x_top_L)+int(x_bot_R))/2
             object_center_Y = (int(y_top_L) + int(y_bot_R)) / 2
             print('car detected: Id: '+str(track_id)+' Detected in cordinates: ('+str(object_center_X)+','+str(object_center_Y)+')')
