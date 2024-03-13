@@ -3,9 +3,9 @@ import random
 from collections import deque
 import cv2
 from ultralytics import YOLO
-
+import pandas as pd
 from tracker import Tracker
-
+import numpy as np
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 video_path = "testingFootage/Clip_TopView_720p_edited.mp4"
@@ -26,9 +26,15 @@ data_deque = {}
 count_cars = [0, 0]
 detection_threshold = 0.35
 
+#nuevas variables
+_,fixed_img_dots = cap.read();
+_,fixed_img_lines = cap.read();
+dict = {'ID':[], 'x':[], 'y':[],'conf_score':[],'speed':[]}
+df_output = pd.DataFrame(dict)
+
 
 def update_cars_count(center_x, frame_width):
-    if center_x > (frame_width / 2):
+    if center_x < (frame_width / 2):
         count_cars[0]=count_cars[0]+1
     else:
         count_cars[1]=count_cars[1]+1
@@ -42,6 +48,19 @@ def draw_permanents():
                 cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), thickness=2)
     cv2.putText(frame, "Right-line total cars: " + str(count_cars[1]), (int(100), int(150)),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), thickness=2)
+
+def draw_permanent_tarces(data_deque,track_id,fixed_img_dots,color):
+    x1 = data_deque[track_id][-1][0]
+    y1 = data_deque[track_id][-1][1]
+    x2 = data_deque[track_id][-1][0]
+    y2 = data_deque[track_id][-1][1]
+    cv2.line(fixed_img_dots, (int(x1), int(y1)), (int(x2), int(y2)),
+             color, 2)
+
+def update_output_df(df_out,idd,x_udf,y_udf,conf_score_u,speed):
+   dic_aux = {'ID':[idd], 'x':[x_udf], 'y':[y_udf],'conf_score':[conf_score_u],'speed':[speed]}
+   df_out = pd.concat([df_out,pd.DataFrame(dic_aux)],ignore_index=True)
+   return df_out
 
 while ret:
     results = model(frame)
@@ -100,8 +119,13 @@ while ret:
                 punto2_y = data_deque[track_id][i][1]
                 cv2.line(frame, (int(punto1_x), int(punto1_y)), (int(punto2_x), int(punto2_y)),
                          (colors[track_id % len(colors)]), 2)
+                cv2.line(fixed_img_lines, (int(punto1_x), int(punto1_y)), (int(punto2_x), int(punto2_y)),
+                         (colors[track_id % len(colors)]), 2)
             cv2.putText(frame, "id:" + str(track_id) + " conf:" + str(rounded_score), (int(x_top_L), int(y_top_L)),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
+            if len(data_deque[track_id]) >= 2:
+                draw_permanent_tarces(data_deque,track_id,fixed_img_dots,colors[track_id % len(colors)])
+            df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,rounded_score,0)
         draw_permanents()
     aux = 0
 
@@ -110,7 +134,9 @@ while ret:
     cv2.waitKey(30)
     # cap_out.write(frame)
     ret, frame = cap.read()
-
+cv2.imwrite(os.path.join('runs' , 'permanent_traces_lines.png'), fixed_img_lines)
+cv2.imwrite(os.path.join('runs' , 'permanent_traces_dots.png'), fixed_img_dots)
+df_output.to_csv(os.path.join('runs' , 'output_data'),)
 cap.release()
 # cap_out.release()
 cv2.destroyAllWindows()
