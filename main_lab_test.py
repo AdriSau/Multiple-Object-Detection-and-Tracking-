@@ -8,7 +8,7 @@ from tracker import Tracker
 import numpy as np
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-video_path = "testingFootage/Clip_TopView_720p_edited.mp4"
+video_path = "testingFootage/ETSISI_AUP.mp4"
 video_path_movement = "testingFootage/prueba.mp4"
 video_out_path = "testingFootage/out.mp4"
 
@@ -24,15 +24,14 @@ tracker = Tracker()
 colors = [(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) for j in range(10)]
 data_deque = {}
 count_cars = [0, 0]
-detection_threshold = 0.5
+detection_threshold = 0.3
 
 #nuevas variables
 _,fixed_img_dots = cap.read();
 _,fixed_img_lines = cap.read();
 dict = {'ID':[], 'x':[], 'y':[],'conf_score':[],'speed':[]}
 df_output = pd.DataFrame(dict)
-conf_hist = []
-conf_aux = []
+
 
 def update_cars_count(center_x, frame_width):
     if center_x < (frame_width / 2):
@@ -66,7 +65,6 @@ def update_output_df(df_out,idd,x_udf,y_udf,conf_score_u,speed):
 while ret:
     results = model(frame)
     aux = 0
-    aux_2 = 0
     for result in results:
         detections = []
         for r in result.boxes.data.tolist():
@@ -78,18 +76,15 @@ while ret:
             class_id = int(class_id)
             if conf_value > detection_threshold:
                 detections.append([x_top_L, y_top_L, x_bot_R, y_bot_R, conf_value])
-                conf_aux[aux_2] = conf_value;
-            aux_2+=1
         tracker.update(frame, detections)
         frame_height, frame_width, nChannnel = frame.shape
-        print("altura: " + str(frame_height) +" anchura: "+ str(frame_width))
+        #print("altura: " + str(frame_height) +" anchura: "+ str(frame_width))
         cv2.rectangle(frame, (int(frame_width - 400), int(0)), (int(frame_width), int(28)), (0, 0, 0), thickness=-1)
         for track in tracker.tracks:
             aux += 1
             bbox = track.bbox
             x_top_L, y_top_L, x_bot_R, y_bot_R = bbox
             track_id = track.track_id
-            conf_hist[track_id] = conf_aux[aux-1];
             object_center_X = (int(x_top_L) + int(x_bot_R)) / 2
             object_center_Y = (int(y_top_L) + int(y_bot_R)) / 2
             print(
@@ -106,7 +101,7 @@ while ret:
                             "Last detection: Id:" + str(track_id) + " posX: " + str(object_center_X) + " posY: " + str(
                                 object_center_Y), (int(frame_width - 395), int(22)),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
-            rounded_score = round(conf_hist[track_id], 3)
+            rounded_score = round(conf_value, 3)
             # creo lista
             if track_id not in data_deque:
                 data_deque[track_id] = deque(maxlen=15)
@@ -130,7 +125,7 @@ while ret:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
             if len(data_deque[track_id]) >= 2:
                 draw_permanent_tarces(data_deque,track_id,fixed_img_dots,colors[track_id % len(colors)])
-            df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,rounded_score,0)
+            df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,conf_value,0)
         draw_permanents()
     aux = 0
 
