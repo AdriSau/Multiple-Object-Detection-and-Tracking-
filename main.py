@@ -23,7 +23,7 @@ tracker = Tracker()
 
 colors = [(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) for j in range(10)]
 data_deque = {}
-detection_threshold = 0.35
+detection_threshold = 0.5
 while ret:
     results = model(frame)
     aux = 0
