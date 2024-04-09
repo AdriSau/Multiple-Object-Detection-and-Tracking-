@@ -6,6 +6,7 @@ from ultralytics import YOLO
 import pandas as pd
 from tracker import Tracker
 import numpy as np
+from shapely.geometry import Point, Polygon
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 video_path = "testingFootage/ETSISI_AUP.mp4"
@@ -14,6 +15,7 @@ video_out_path = "testingFootage/out.mp4"
 
 cap = cv2.VideoCapture(video_path)
 ret, frame = cap.read()
+frame_height, frame_width, nChannnel = frame.shape
 
 # cap_out = cv2.VideoWriter(video_out_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), cap.get(cv2.CAP_PROP_FPS),(frame.shape[1], frame.shape[0]))
 xvalue_div_line = 591
@@ -34,7 +36,9 @@ dict = {'ID':[], 'x':[], 'y':[],'conf_score':[],'speed':[]}
 df_output = pd.DataFrame(dict)
 speed_ds = {}
 
-
+def inside_main_det_zone (x_value, y_value):
+    zone = [(0,377),(285,273),(862,273),(1279,421),(frame_width,frame_height),(0,frame_height)]
+    return Polygon(zone).contains(Point(x_value, y_value))
 def update_cars_count(center_x, frame_width):
     if center_x < (xvalue_div_line):
         count_cars[0]=count_cars[0]+1
@@ -99,8 +103,13 @@ def speed_mang(track_id,speed_ds,Bot_cent_X,Bot_cent_Y,limit_x):
             else:
                 speed_ds[track_id][1] +=1
 def draw_guidelines():
+    #speed lines
     cv2.line(frame, (671, 351), (972, 345), (0,0,0), thickness=1)
     cv2.line(frame, (721, 449), (1133, 423), (0,0,0), thickness=1)
+    #main detection zone
+    zone = np.array([[0, 377], [285, 273], [862, 273], [1279, 421], [frame_width, frame_height], [0, frame_height]])
+    zone = zone.reshape((-1,1,2))
+    cv2.polylines(frame, [zone],True, (252, 255, 97), thickness = 1)
 
 
 while ret:
@@ -117,10 +126,11 @@ while ret:
             y_top_L = int(y_top_L)
             y_bot_R = int(y_bot_R)
             class_id = int(class_id)
-            if conf_value > detection_threshold:
+            bot_x_value = (x_top_L + x_bot_R) / 2
+            if conf_value > detection_threshold and inside_main_det_zone(bot_x_value,y_bot_R):
                 detections.append([x_top_L, y_top_L, x_bot_R, y_bot_R, conf_value])
         tracker.update(frame, detections)
-        frame_height, frame_width, nChannnel = frame.shape
+        #frame_height, frame_width, nChannnel = frame.shape
         draw_guidelines()
         print("altura: " + str(frame_height) +" anchura: "+ str(frame_width))
         cv2.rectangle(frame, (int(frame_width - 400), int(0)), (int(frame_width), int(28)), (0, 0, 0), thickness=-1)
