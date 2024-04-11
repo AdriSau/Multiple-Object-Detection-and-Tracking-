@@ -19,9 +19,10 @@ frame_height, frame_width, nChannnel = frame.shape
 
 # cap_out = cv2.VideoWriter(video_out_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), cap.get(cv2.CAP_PROP_FPS),(frame.shape[1], frame.shape[0]))
 xvalue_div_line = 591
-model = YOLO("best.pt")
+#model = YOLO("best.pt")
 #model = YOLO("Ocars.pt")
 #model = YOLO('yolov8n.pt')
+model =  YOLO('Y8_500_HW_Etsisi.pt')
 
 tracker = Tracker()
 colors = [(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) for j in range(50)]
