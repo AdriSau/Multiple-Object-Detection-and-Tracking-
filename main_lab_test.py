@@ -16,7 +16,7 @@ video_out_path = "testingFootage/out.mp4"
 cap = cv2.VideoCapture(video_path)
 ret, frame = cap.read()
 frame_height, frame_width, nChannnel = frame.shape
-
+print(str( cap.get(cv2.CAP_PROP_FPS)))
 # cap_out = cv2.VideoWriter(video_out_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), cap.get(cv2.CAP_PROP_FPS),(frame.shape[1], frame.shape[0]))
 xvalue_div_line = 591
 #model = YOLO("best.pt")
@@ -36,10 +36,19 @@ _,fixed_img_lines = cap.read();
 dict = {'ID':[], 'x':[], 'y':[],'conf_score':[],'speed':[]}
 df_output = pd.DataFrame(dict)
 speed_ds = {}
+#nuevas x2
+speed_hist_dict = {'ID':[], 'State':[], 'Cont':[],'Result':[]}
+sp_f = pd.DataFrame(speed_hist_dict)
 
 def inside_main_det_zone (x_value, y_value):
+    #print("MAIN ZONE parameters : width: " + str(frame_width) + " high: " + str(frame_height))
     zone = [(0,377),(285,273),(862,273),(1279,421),(frame_width,frame_height),(0,frame_height)]
     return Polygon(zone).contains(Point(x_value, y_value))
+
+def inside_speed_det_zone (x_value, y_value):
+    print("SPEED ZONE parameters : width: " + str(frame_width) + " high: "+ str(frame_height))
+    zone_s = [(780,478),(1185,446),(frame_width,492),(frame_width,frame_height),(928,frame_height)]
+    return Polygon(zone_s).contains(Point(x_value, y_value))
 def update_cars_count(center_x, frame_width):
     if center_x < (xvalue_div_line):
         count_cars[0]=count_cars[0]+1
@@ -82,9 +91,10 @@ def update_output_df(df_out,idd,x_udf,y_udf,conf_score_u,speed):
    return df_out
 def speed_mang(track_id,speed_ds,Bot_cent_X,Bot_cent_Y,limit_x):
     #deteccion nueva, se añade al seguimiento
+    cv2.line(frame, (int(limit_x), 0), (int(limit_x), frame_height), (0,255,0), thickness=2)
     if track_id not in speed_ds:
         speed_ds [track_id] = []
-        if object_center_X > limit_x:
+        if object_center_X > limit_x and inside_speed_det_zone(Bot_cent_X, Bot_cent_Y):
             speed_ds[track_id].append(True)
             speed_ds[track_id].append(0)
             speed_ds[track_id].append("...")
@@ -94,19 +104,25 @@ def speed_mang(track_id,speed_ds,Bot_cent_X,Bot_cent_Y,limit_x):
             speed_ds[track_id].append("N/A")
     elif speed_ds[track_id][0] == True:
         if speed_ds[track_id][1] == 0 and Bot_cent_Y <= -0.063107 * Bot_cent_X + 494.5:
+            print("ENTRO: ID" + str(track_id) + "con state: " + str(speed_ds[track_id][0]))
             speed_ds[track_id][1] = 1
             cv2.line(frame, (721, 449), (1133, 423), (0,255,0), thickness=2)
         elif speed_ds[track_id][1] >= 1:
             if Bot_cent_Y <= -0.019934 * Bot_cent_X + 364.38:
-                speed_ds[track_id][2] = round(0.024 / ((speed_ds[track_id][1] * (1/30))/3600),2)
-                speed_ds[track_id][0] == False
+                speed_ds[track_id][2] = round(0.012 / ((speed_ds[track_id][1] * (1.0/30.0))/3600.0),2)
+                speed_ds[track_id][0] = False
                 cv2.line(frame, (671, 351), (972, 345), (0,0,255), thickness=2)
+                print("SALIO: ID" + str(track_id) + "con state: " + str(speed_ds[track_id][0])+ "i ticks = " +str(speed_ds[track_id][1])+ "y vel: " + str(speed_ds[track_id][2]))
             else:
                 speed_ds[track_id][1] +=1
 def draw_guidelines():
     #speed lines
     cv2.line(frame, (671, 351), (972, 345), (0,0,0), thickness=1)
     cv2.line(frame, (721, 449), (1133, 423), (0,0,0), thickness=1)
+    #speed detection zone
+    zone_s = np.array([[780, 478], [1185, 446], [frame_width, 492], [frame_width, frame_height], [928, frame_height]])
+    zone_s = zone_s.reshape((-1,1,2))
+    cv2.polylines(frame, [zone_s], True, (252, 255, 97), thickness=1)
     #main detection zone
     zone = np.array([[0, 377], [285, 273], [862, 273], [1279, 421], [frame_width, frame_height], [0, frame_height]])
     zone = zone.reshape((-1,1,2))
@@ -116,6 +132,7 @@ def draw_guidelines():
 while ret:
     results = model(frame)
     aux = 0
+    ex = 0
     for result in results:
         detections = []
         Speed_line_top = (255, 255, 255)
@@ -177,13 +194,16 @@ while ret:
                          (colors[track_id % len(colors)]), 2)
                 cv2.line(fixed_img_lines, (int(punto1_x), int(punto1_y)), (int(punto2_x), int(punto2_y)),
                          (colors[track_id % len(colors)]), 2)
-            cv2.putText(frame, "id:" + str(track_id) + " conf:" + str(rounded_score), (int(x_top_L), int(y_top_L)),
+            cv2.putText(farme, "id:" + str(track_id) + " conf:" + str(rounded_score), (int(x_top_L), int(y_top_L)),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
             if len(data_deque[track_id]) >= 2:
                 draw_permanent_tarces(data_deque,track_id,fixed_img_dots,colors[track_id % len(colors)])
 
             df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,conf_value,speed_ds[track_id][2])
         draw_permanents()
+        if ex == 0:
+            cv2.imwrite(os.path.join('runs', 'aux.png'), frame)
+
     aux = 0
 
     # fuera del for un bucle para elminar los ids perdidos
@@ -193,7 +213,10 @@ while ret:
     ret, frame = cap.read()
 cv2.imwrite(os.path.join('runs' , 'permanent_traces_lines.png'), fixed_img_lines)
 cv2.imwrite(os.path.join('runs' , 'permanent_traces_dots.png'), fixed_img_dots)
-df_output.to_csv(os.path.join('runs' , 'output_data'),)
+clean_df = df_output.copy()
+df_output.to_csv(os.path.join('runs' , 'raw_data'), index = False)
+clean_df = clean_df.drop_duplicates(subset=['ID'], keep='last')
+clean_df.to_csv(os.path.join('runs', 'filtered_data'),index = False )
 cap.release()
 # cap_out.release()
 cv2.destroyAllWindows()
