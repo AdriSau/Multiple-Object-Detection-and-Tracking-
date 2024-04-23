@@ -33,7 +33,7 @@ detection_threshold = 0.2
 #nuevas variables
 _,fixed_img_dots = cap.read();
 _,fixed_img_lines = cap.read();
-dict = {'ID':[], 'x':[], 'y':[],'conf_score':[],'speed':[]}
+dict = {'ID':[], 'x':[], 'y':[],'speed':[]}
 df_output = pd.DataFrame(dict)
 speed_ds = {}
 #nuevas x2
@@ -85,8 +85,8 @@ def draw_permanent_tarces(data_deque,track_id,fixed_img_dots,color):
     cv2.line(fixed_img_dots, (int(x1), int(y1)), (int(x2), int(y2)),
              color, 2)
 
-def update_output_df(df_out,idd,x_udf,y_udf,conf_score_u,speed):
-   dic_aux = {'ID':[idd], 'x':[x_udf], 'y':[y_udf],'conf_score':[conf_score_u],'speed':[speed]}
+def update_output_df(df_out,idd,x_udf,y_udf,speed):
+   dic_aux = {'ID':[idd], 'x':[x_udf], 'y':[y_udf],'speed':[speed]}
    df_out = pd.concat([df_out,pd.DataFrame(dic_aux)],ignore_index=True)
    return df_out
 def speed_mang(track_id,speed_ds,Bot_cent_X,Bot_cent_Y,limit_x):
@@ -101,7 +101,7 @@ def speed_mang(track_id,speed_ds,Bot_cent_X,Bot_cent_Y,limit_x):
         else:
             speed_ds[track_id].append(False)
             speed_ds[track_id].append(0)
-            speed_ds[track_id].append("N/A")
+            speed_ds[track_id].append("NA")
     elif speed_ds[track_id][0] == True:
         if speed_ds[track_id][1] == 0 and Bot_cent_Y <= -0.063107 * Bot_cent_X + 494.5:
             print("ENTRO: ID" + str(track_id) + "con state: " + str(speed_ds[track_id][0]))
@@ -109,7 +109,7 @@ def speed_mang(track_id,speed_ds,Bot_cent_X,Bot_cent_Y,limit_x):
             cv2.line(frame, (721, 449), (1133, 423), (0,255,0), thickness=2)
         elif speed_ds[track_id][1] >= 1:
             if Bot_cent_Y <= -0.019934 * Bot_cent_X + 364.38:
-                speed_ds[track_id][2] = round(0.012 / ((speed_ds[track_id][1] * (1.0/30.0))/3600.0),2)
+                speed_ds[track_id][2] = round(0.011 / ((speed_ds[track_id][1] * (1.0/30.0))/3600.0),2)
                 speed_ds[track_id][0] = False
                 cv2.line(frame, (671, 351), (972, 345), (0,0,255), thickness=2)
                 print("SALIO: ID" + str(track_id) + "con state: " + str(speed_ds[track_id][0])+ "i ticks = " +str(speed_ds[track_id][1])+ "y vel: " + str(speed_ds[track_id][2]))
@@ -173,7 +173,6 @@ while ret:
                             "Last detection: Id:" + str(track_id) + " posX: " + str(object_center_X) + " posY: " + str(
                                 object_center_Y), (int(frame_width - 395), int(22)),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
-            rounded_score = round(conf_value, 3)
             speed_mang(track_id,speed_ds,object_center_X,y_bot_R,591)
             # creo lista
             if track_id not in data_deque:
@@ -194,12 +193,13 @@ while ret:
                          (colors[track_id % len(colors)]), 2)
                 cv2.line(fixed_img_lines, (int(punto1_x), int(punto1_y)), (int(punto2_x), int(punto2_y)),
                          (colors[track_id % len(colors)]), 2)
-            cv2.putText(farme, "id:" + str(track_id) + " conf:" + str(rounded_score), (int(x_top_L), int(y_top_L)),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
             if len(data_deque[track_id]) >= 2:
                 draw_permanent_tarces(data_deque,track_id,fixed_img_dots,colors[track_id % len(colors)])
-
-            df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,conf_value,speed_ds[track_id][2])
+            if track_id in speed_ds:
+                cv2.putText(frame, "id:" + str(track_id) + " Km,h:" + str(speed_ds[track_id][2]), (int(x_top_L), int(y_top_L)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
+            else:
+                cv2.putText(frame, "id:" + str(track_id) + " Km,h:    ", (int(x_top_L), int(y_top_L)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
+            df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,speed_ds[track_id][2])
         draw_permanents()
         if ex == 0:
             cv2.imwrite(os.path.join('runs', 'aux.png'), frame)
