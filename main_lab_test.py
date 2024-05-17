@@ -9,9 +9,9 @@ import numpy as np
 from shapely.geometry import Point, Polygon
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-video_path = "testingFootage/ETSISI_AUP.mp4"
-video_path_movement = "testingFootage/prueba.mp4"
-video_out_path = "testingFootage/out.mp4"
+video_path = "Datasets_and_testfootage/testingFootage/ETSISI_AUP.mp4"
+video_path_movement = "Datasets_and_testfootage/testingFootage/prueba.mp4"
+video_out_path = "Datasets_and_testfootage/testingFootage/out.mp4"
 
 cap = cv2.VideoCapture(video_path)
 ret, frame = cap.read()
@@ -22,7 +22,7 @@ xvalue_div_line = 591
 #model = YOLO("best.pt")
 #model = YOLO("Ocars.pt")
 #model = YOLO('yolov8n.pt')
-model =  YOLO('Y8_500_HW_Etsisi.pt')
+model =  YOLO('Models/Y8_500_HW_Etsisi.pt')
 
 tracker = Tracker()
 colors = [(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) for j in range(50)]

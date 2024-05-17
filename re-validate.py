@@ -13,11 +13,11 @@ if __name__ == '__main__':
     metrics = model.val(data="D:\cloned_repos\Multiple-Object-Detection-and-Tracking-\Multiple-Object-Detection-and-Tracking-\AUB_DS\data.yaml")
     metrics.box.map
 
-    model = YOLO("best.pt")
+    model = YOLO("Models/best.pt")
     metrics = model.val(data="D:\cloned_repos\Multiple-Object-Detection-and-Tracking-\Multiple-Object-Detection-and-Tracking-\AUB_DS\data.yaml")
     metrics.box.map
 
-    model = YOLO("Y8_500_HW_Etsisi.pt")
+    model = YOLO("Models/Y8_500_HW_Etsisi.pt")
     metrics = model.val(data="D:\cloned_repos\Multiple-Object-Detection-and-Tracking-\Multiple-Object-Detection-and-Tracking-\AUB_DS\data.yaml")
     metrics.box.map
 

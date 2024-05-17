@@ -2,8 +2,8 @@ from ultralytics import YOLO
 import cv2
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-model_car = YOLO('best.pt')
-model = YOLO ('MOD_Model.pt')
+model_car = YOLO('Models/best.pt')
+model = YOLO ('Models/MOD_Model.pt')
 
 highway = "testingFootage/prueba.mp4"
 tCircle = "testingFootage/traffic_circle_footage.mp4"

@@ -8,16 +8,16 @@ from tracker import Tracker
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-video_path = "testingFootage/Clip_TopView_720p_edited.mp4"
-video_path_movement = "testingFootage/prueba.mp4"
-video_out_path = "testingFootage/out.mp4"
+video_path = "Datasets_and_testfootage/testingFootage/Clip_TopView_720p_edited.mp4"
+video_path_movement = "Datasets_and_testfootage/testingFootage/prueba.mp4"
+video_out_path = "Datasets_and_testfootage/testingFootage/out.mp4"
 
 cap = cv2.VideoCapture(video_path)
 ret, frame = cap.read()
 
 #cap_out = cv2.VideoWriter(video_out_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), cap.get(cv2.CAP_PROP_FPS),(frame.shape[1], frame.shape[0]))
 
-model = YOLO("best.pt")
+model = YOLO("Models/best.pt")
 
 tracker = Tracker()
 
