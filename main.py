@@ -20,8 +20,8 @@ print(str( cap.get(cv2.CAP_PROP_FPS)))
 # cap_out = cv2.VideoWriter(video_out_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), cap.get(cv2.CAP_PROP_FPS),(frame.shape[1], frame.shape[0]))
 xvalue_div_line = 591
 
-#model =  YOLO('Models/Y8_500_HW_Etsisi.pt')
-model =  YOLO('Models/best.pt')
+model =  YOLO('Models/Y8_500_HW_Etsisi.pt')
+#model =  YOLO('Models/best.pt')
 tracker = Tracker()
 data_deque = {}
 speed_ds = {}

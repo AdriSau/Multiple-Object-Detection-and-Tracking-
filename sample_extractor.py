@@ -127,16 +127,16 @@ def draw_guidelines():
     zone = zone.reshape((-1,1,2))
     cv2.polylines(frame, [zone],True, (252, 255, 97), thickness = 1)
 
-
+ex = 0
 while ret:
     results = model(frame)
     aux = 0
-    ex = 0
+    ex = ex + 1
     for result in results:
         detections = []
         Speed_line_top = (255, 255, 255)
         Speed_line_bot = (255, 255, 255)
-        ex = ex + 1
+
         for r in result.boxes.data.tolist():
             x_top_L, y_top_L, x_bot_R, y_bot_R, conf_value, class_id = r
             x_top_L = int(x_top_L)
@@ -201,7 +201,8 @@ while ret:
                 cv2.putText(frame, "id:" + str(track_id) + " Km,h:    ", (int(x_top_L), int(y_top_L)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), thickness=2)
             df_output = update_output_df(df_output,track_id,object_center_X,object_center_Y,speed_ds[track_id][2])
         #draw_permanents()
-        if ex == 100:
+        print(ex)
+        if ex == 50:
             cv2.imwrite(os.path.join('runs', 'aux.png'), frame)
 
     aux = 0

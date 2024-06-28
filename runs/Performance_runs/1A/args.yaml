@@ -1,8 +1,8 @@
 task: detect
 mode: train
 model: yolov8n.yaml
-data: D:\cloned_repos\Multiple-Object-Detection-and-Tracking-\Multiple-Object-Detection-and-Tracking-\DS_Cars\data.yaml
-epochs: 200
+data: D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-\Sources\data.yaml
+epochs: 3
 time: null
 patience: 50
 batch: 16
@@ -13,7 +13,7 @@ cache: false
 device: null
 workers: 8
 project: null
-name: train3
+name: 1A
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -98,4 +98,4 @@ mixup: 0.0
 copy_paste: 0.0
 cfg: null
 tracker: botsort.yaml
-save_dir: runs\detect\train3
+save_dir: D:\ProyectosGithub\Multiple-Object-Detection-and-Tracking-\runs\detect\train15
